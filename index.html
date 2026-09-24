@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>COMP 3123 - Lab 1 - JavaScript Refresher Exercises</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; }
+  h1 { font-size: 1.4em; }
+  section { margin-bottom: 28px; padding-bottom: 16px; border-bottom: 1px solid #ddd; }
+  h2 { font-size: 1.1em; margin-bottom: 6px; }
+  pre { background: #f5f5f5; padding: 10px 14px; border-radius: 6px; white-space: pre-wrap; }
+  code { color: #0a5; }
+</style>
+</head>
+<body>
+<h1>COMP 3123 &ndash; Lab 1 &ndash; JavaScript Refresher Exercises</h1>
+<p>Open the browser console (F12) to see the same output logged there.</p>
+
+<section>
+  <h2>Exercise 1: Capitalize each word</h2>
+  <pre id="out1"></pre>
+</section>
+
+<section>
+  <h2>Exercise 2: Largest of three integers</h2>
+  <pre id="out2"></pre>
+</section>
+
+<section>
+  <h2>Exercise 3: Move last three characters to the start</h2>
+  <pre id="out3"></pre>
+</section>
+
+<section>
+  <h2>Exercise 4: Type of angle</h2>
+  <pre id="out4"></pre>
+</section>
+
+<script src="exercise1.js"></script>
+<script src="exercise2.js"></script>
+<script src="exercise3.js"></script>
+<script src="exercise4.js"></script>
+<script>
+  document.getElementById('out1').textContent =
+    [capitalizeWords("javascript exercises"),
+     capitalizeWords("java script"),
+     capitalizeWords("hi hi hello")].join('\n');
+
+  document.getElementById('out2').textContent =
+    [max(1, 0, 1), max(0, -10, -20), max(1000, 510, 440)].join('\n');
+
+  document.getElementById('out3').textContent =
+    [right("Python"), right("JavaScript"), right("Hi")].join('\n');
+
+  document.getElementById('out4').textContent =
+    [angle_Type(47), angle_Type(90), angle_Type(145), angle_Type(180)].join('\n');
+</script>
+</body>
+</html>
